@@ -28,4 +28,7 @@ module "test_repo" {
     name = "develop"
   }
 ]
+  push_collaborators = [
+    "sevdadurdu"
+  ]
 }
