@@ -49,4 +49,7 @@ module "test_repo" {
     }
   }
 ]
+  plaintext_secrets = {
+  TEST_API_KEY = "123456"
+}
 }
