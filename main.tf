@@ -18,7 +18,7 @@ module "test_repo" {
   description = "Testing repository module with Terraform"
   visibility  = "private"
 
-  has_issues = false
+  has_issues = true
   has_wiki   = true
 
   topics = ["terraform", "module-test"]
