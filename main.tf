@@ -16,7 +16,7 @@ module "test_repo" {
 
   name        = "hande-terraform-module-test"
   description = "Testing repository module with Terraform"
-  visibility  = "private"
+  visibility  = "public"
 
   has_issues = true
   has_wiki   = true
@@ -31,4 +31,22 @@ module "test_repo" {
   push_collaborators = [
     "sevdadurdu"
   ]
+  branch_protections_v4 = [
+  {
+    pattern = "main"
+
+    enforce_admins = true
+
+    required_pull_request_reviews = {
+      dismiss_stale_reviews           = true
+      require_code_owner_reviews      = true
+      #required_approving_review_count = 2
+    }
+
+    required_status_checks = {
+      strict   = false
+      contexts = []
+    }
+  }
+]
 }
