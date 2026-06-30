@@ -52,4 +52,17 @@ module "test_repo" {
   plaintext_secrets = {
   TEST_API_KEY = "123456"
 }
+  rulesets = [
+  {
+    ruleset_name        = "Protect main branch"
+    ruleset_target      = "branch"
+    ruleset_enforcement = "active"
+
+    include = ["refs/heads/main"]
+    exclude = []
+
+    deletion         = true
+    non_fast_forward = true
+  }
+]
 }
