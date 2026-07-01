@@ -20,6 +20,7 @@ module "test_repo" {
   visibility  = "public"
 
   has_issues = true
+  has_projects = true
   has_wiki   = true
 
   topics = ["terraform", "module-test"]
