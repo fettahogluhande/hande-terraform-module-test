@@ -68,4 +68,14 @@ module "test_repo" {
   }
 ]
 
+  webhooks = [
+  {
+    active       = true
+    events       = ["push", "pull_request"]
+    url          = "https://webhook.site/xxxxxx"
+    content_type = "json"
+    insecure_ssl = false
+  }
+]
+
 }
