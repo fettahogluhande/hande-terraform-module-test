@@ -16,6 +16,7 @@ module "test_repo" {
 
   name        = "hande-terraform-module-test"
   description = "Testing repository module with Terraform"
+  homepage_url = "https://github.com/fettahogluhande/hande-terraform-module-test"
   visibility  = "public"
 
   has_issues = true
@@ -65,4 +66,5 @@ module "test_repo" {
     non_fast_forward = true
   }
 ]
+
 }
